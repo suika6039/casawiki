@@ -1,0 +1,570 @@
+YukiWiki作業記録
+
+*2006-07-06
+- Version 2.1.3.
+- Subversionに移行。
+- RSSをファイルとして出力するように変更。
+-- wiki.cgi: $modifier_rss_about追加。
+-- wiki.cgi: $file_rss追加。
+-- wiki.cgi: update_rssfile追加。
+-- パッケージにrss.xml追加。説明はreadme.txtに。
+- 簡単なspam対策。
+-- wiki.cgi: keyword_reject追加。
+- メールの書式を変更。
+- 書き込み長さの最大制限
+-- wiki.cgi: length_reject追加。
+-- wiki.cgi: $max_message_length追加。
+-- resource.txt: toolongpost追加。
+
+*2004-10-24
+- wikibook_branchで作業中。
+- Version 2.1.2a.
+- wiki.cgi: &make_linkでスキームのチェックを入れるように修正。
+- zenitaniさんに感謝。
+- wiki.cgi: textareaからwrap="off"を削除。
+- wiki.cgi: Copyright表示をPowered byに変更。
+- cvs tag tag_release-212a_2004-10-24
+
+*2004-05-07
+- wikibook_branchで作業中。
+- wiki.css: Verdanaフォントをデフォルトに。その他細かい点を修正。
+
+*2004-05-06
+- wikibook_branchで作業中。
+- wiki.css: dl, dt, ddを調整。
+
+*2004-03-31
+- wikibook_branchで作業中。
+- wiki.cgi: RssPage→$RssPage
+- zenitaniさんに感謝。
+
+*2004-03-27
+- wikibook_branchで作業中。
+- Version 2.1.2.
+- cvs tag tag_release-212_2004-03-28
+
+*2004-03-27
+- wikibook_branchで作業中。
+- plugin/link.pl: http|https|ftp|mailto以外のURLは無視するように修正。
+- zenitaniさんに感謝。
+
+*2004-03-27
+- wikibook_branchで作業中。
+- wiki.cgi: 目次部分はタグを除去するように修正。
+- shinoさんに感謝。
+
+*2004-03-21
+- 書籍サポートサイトに「練習用YukiWikiサイト」を設置するため、別ブランチを作る。
+- branch_wb-wiki_2004-03-21
+- http://www.hyuki.com/wb/wiki/wiki.cgi
+
+*2004-03-02
+- wikibook_branchで作業中。
+- Yuki/PluginManager.pm: stashを使わずUNIVERSAL::canを使ってsubの有無を判定。
+- andiさんに感謝。
+
+*2004-03-02
+- wikibook_branchで作業中。
+- Yuki/PluginManager.pm: 不要なuse varsを削除。
+
+*2004-02-27
+- wikibook_branchで作業中。
+- Version 2.1.1.
+- readme.txt: pluginに関する記述漏れを修正。
+- cvs tag tag_release-candidate-211_2004-02-27
+- これを書籍収録版にする予定。
+
+*2004-02-26
+- wikibook_branchで作業中。
+- Version 2.1.1.
+- プラグインを追加（サンプルとしての意味合いが強い）。
+- plugin.txt: 追加。
+- plugin/link.pl: 追加。
+- plugin/recent.pl: 追加。
+- plugin/ruby.pl: 追加。
+- plugin/verb.pl: 追加。
+- cvs tag tag_release-candidate-211_2004-02-26
+- これを書籍収録版にする予定→やめ。
+
+*2004-02-24
+- wikibook_branchで作業中。
+- Version 2.1.0e.
+- Yuki/PluginManager.pm: 追加。
+- wiki.cgi: plugin関連追加。
+- resource.txt: plugin関連追加。
+- これでプラグイン機能がenableになった。
+-- プラグイン自体はzipにはまだ含めない。
+-- 標準プラグインを決める必要がある。
+
+*2004-02-24
+- wikibook_branchで作業中。
+- Version 2.1.0d.
+- wiki.css: tableの灰色がきつすぎるのでライトブルーに。
+- .htaccess: AddType text/css .css 追加。
+
+*2004-02-24
+- wikibook_branchで作業中。
+- Version 2.1.0d.
+- .htaccess: AddHandler cgi-script .cgi
+- wiki.css: body.normalが抜けていた。
+
+*2004-02-21
+- wikibook_branchで作業中。
+- Version 2.1.0d.
+- $use_FixedFrontPageが効いていなかった。
+- RSSのdc_dateが効いていなかった。
+- cvs tag tag_release-210d_2004-02-21
+
+*2004-02-21
+- wikibook_branchで作業中。
+- Version 2.1.0c.
+- UNIX環境で正しくdiffできないのを修正。
+
+*2004-02-20
+- wikibook_branchで作業中。
+- Version 2.1.0b.
+- メインのYukiWikiをこのバージョンに戻し、
+- プラグイン機能はいったんdisableにする。
+
+*2004-02-15
+- wikibook_branchで作業中。
+- Version 2.1.0b.
+- wiki.cgi: textareaの先頭に1個改行を入れる。
+
+*2004-02-13
+- wikibook_branchで作業中。
+- wiki.cgi: RSS Autodiscovery用のヘッダを追加。
+- <link rel="alternate" type="application/rss+xml" title="RSS" href="$url_cgi?RssPage" />
+
+*2004-02-13
+- wikibook_branchで作業中。
+- Version 2.1.0a.
+- RSSのchannelのaboutにはRSSのchannelを入れたほうがよいというので修正。
+- Yuki/RSS.pm: channelにaboutを追加。Version 0.4.
+- wiki.cgi: $modifier_rss_linkを使ってaboutフィールドを埋める.
+
+*2004-02-09
+- wikibook_branchで作業中。
+- Version 2.1.0.
+- cvs tag tag_release-210_2004-02-09
+
+*2004-02-09
+- wikibook_branchで作業中。
+- Yuki/YukiWikiDB.pm: ファイル書き込みのbinmodeをやめる。
+- Windows環境でCR LFとLFが混在してしまいdiffが正しく出ないため。
+- wiki.css: 整理。
+
+*2004-02-02
+- wikibook_branchで作業中。
+- ここまでの機能を2.1.0にしようと思っている。
+
+*2004-02-02
+- wikibook_branchで作業中。
+- wiki.css, wiki.cgi: [VerbatimSoft] バーベイタムを入れた。 --(, --)
+- wiki.css, wiki.cgi: [VerbatimHard] バーベイタムを入れた。 ---(, ---)
+- Yuki/RSS.pm: dc_dateを入れた(WalWiki参考)。
+- Yuki/RSS.pm: xmlns抜け修正(Thank you, y-Akiさん)。
+- wiki.cgi: WalWikiに習ってencodeを修正[better encode]。
+- resource.txt, wiki.cgi: &text_to_html: 目次があるときは「目次」を追加。
+- wiki.cgi: Fix bug: 見出し文字列が空の時には見出しとして扱わないようにした。
+- wiki.cgi: 見出しレベルを*, **, ***の3レベルにした。
+- wiki.cgi: $use_FixedFrontPageを導入してFrontPageを編集可能にできるようにした。
+- frontpage.txt: Fix typo.
+- wiki.css: Styles for printer.
+- wiki.cgi: Add "editlink" class.
+
+*2004-01-26
+- wikibook_branchで作業中。
+- TODO:
+    - prohostingで動作確認。特にmodifier_...を変更した場合。
+
+*2004-01-25
+- ★以下、wikibook_branchで作業★
+- 2004-12-04〜2004-01-14の修正はtrunk側なので、こちらにはまだ反映されていないことに注意。
+- wiki.cgi: バージョン名にWBを付加する。Copyright表記を修正。
+- convert.cgi: 削除する。
+- history1.txt: 削除する。
+- history2.txt: 削除する。
+- history.txt: trunkの方から統合する。
+- frontpage.txt: 修正。
+- ここまでで動作確認。タグを張る。
+- cvs tag tag_run_2004-01-26
+
+*2004-01-25
+- YukiWiki 2.0.6系を/wb/wikiに移動し、そちらを新たな2.1系にする。
+- YukiWiki 2.1.dev系は保留とする。
+
+*2004-01-14
+- YukiWiki 2.1.dev8で作業中。
+- readme.txtに合わせてディレクトリを整理した。
+- それに伴い、config.plを整理。
+- theme/ ディレクトリを作成。CSSとGIFはここに入れる。
+
+*2003-12-20
+- YukiWiki 2.1.dev8で作業中。
+- 見出しレベルを*, **, ***の3レベルにした。
+- Jcode-0.68をlib以下に展開した。
+- do_rss: Jcodeを用い、EUC-JP, Shift_JIS, UTF-8のいずれでもRSS出力可能にした。
+- config.pl: rss_encodingを追加。
+- config.pl: kanjicodeを削除。コンテンツはcharsetで統一する。
+- code_convert: 文字コードを適切にマッピングするようにした。
+- readme.txt: ばらばらになっていた情報を集めたり、ディレクトリ一覧を作ったりした。
+
+*2003-12-14
+- YukiWiki1のhistory1.txtとhistory2.txtをまとめてhistory.txtとした。
+- test_convertを削除。
+- YukiWikiMiniの場所を移動。
+
+*2003-12-14
+- plugins/ → plugin/ に名前変更。
+- image/ 作成。
+
+*2003-12-13
+- YukiWiki 2.1.dev7で作業中。
+- config.pl: 作成。
+- $modifier_ 変数群をすべて$config{  }に変更。
+
+*2003-12-11
+- template.html, wiki.css: transparentはCSSに書く。
+- plugins/attach.pl: 作成中。
+
+*2003-12-10
+- YukiWiki 2.1.dev5で作業中。
+- Yuki::Templateの実装。
+- template.html: テンプレート例を作成。
+- %decoration: 削除。
+- dump_error: 追加。テンプレートが使えなくても使えるprint_error相当。
+- resource.txt: いろいろ追加。
+- &text_to_html: 目次があるときは「目次」を追加。
+
+*2003-12-09
+- YukiWiki 2.1.dev4で作業中。
+- ActionPluginの下準備。
+- linktree.pl: WikiNameがarmoredのときのバグ修正。
+
+*2003-12-09
+- YukiWiki 2.1.dev3で作業中。
+- filterプラグインの仕様を変更。definedのときオーバーライドするようにした。
+- filter_layout.pl: サンプルとしてspecial_rawoutを作った。
+
+*2003-12-08
+- YukiWiki 2.1.dev2で作業中。
+- WalWikiに習ってencodeを修正[better encode]。
+- [LinkTreePlugin][[リンクツリープラグイン]]を作ってみた(linktree.pl)。
+- RSS.pmのでxmlns抜け修正(Thank you, y-Akiさん)。
+
+*2003-12-07
+- YukiWiki 2.1.dev1で作業中。
+- フィルタプラグインの機構を入れた。
+- ブロックプラグインを入れた。
+- [VerbatimSoft] バーベイタムを入れた。 --(, --)
+- [VerbatimHard] バーベイタムを入れた。 ---(, ---)
+- [FilterPlugin] フィルタ機能を入れた。サンプルとしてfilter_layout.plを実装した。
+- [AutoPluginUsage]プラグインの利用方法が自動的に編集時のヘルプに取り込まれようにした。
+- Fix bug: 見出し文字列が空の時には見出しとして扱わないようにした。
+
+*2003-12-06
+- YukiWiki 2.1.dev0で作業中。
+- プラグインの機構を入れた。とりあえず&user_plugin(argument)の形式。
+- plugins/link.plで名前付きリンクを実現した。
+- plugins/amazon.plでアマゾンのリンクを実現した。
+- RSS.pmにdc_dateを入れた(WalWiki参考)。
+
+*2003-12-04
+- YukiWiki 2.1.dev0で作業中。
+- Yuki::YukiWikiDBをデフォルトにした。
+- $use_FixedFrontPageを導入してFrontPageを編集可能にできるようにした。
+- WalWikiの塚本さんから有益な情報と励ましをたくさんいただいた。
+
+*2003-07-13
+- YukiWiki 2.0.6xxで作業中。
+- 2.0.6xで入れた修正の再修正。コメント機能のあたり。
+
+*2003-06-06
+- YukiWiki 2.0.6xで作業中。
+- 整形済みの中のembed_command, embed_rcommandの扱いを修正中。塚本さんの指摘による。
+- TODO:AnyDBM_FileでYuki::YukiWikiDBをデフォルトデータベースの順番をいじるようにしたほうがよいと思う。
+
+*2003-02-23
+- /^\s*$/ にマッチしたときに通常モードに戻るのではなく/^$/にマッチしたときに戻るように修正。
+これは、<pre>の中にスペースだけの行が含まれたときに一度</pre>になってしまうのを防ぐため。
+
+*2002-08-28
+- Yuki::YukiWikiDBにflockを入れた。
+- Yuki::YukiWikiDBのデバッグプリントをdieに変更した。
+- hyuki.comで運用していたYukiWikiのデータベースを復旧。
+- AnyDBM_FileからYuki::YukiWikiDBに手動で変換。
+- wiki.cgiスクリプトには変更なし。
+
+*2002-08-22
+- YukiWiki 2.0.5公開。
+
+*2002-08-22
+- 2.0.4のXSS対策に不十分な点があったので&print_editform修正(関村さんの指摘による)。
+$form{mypassword}を&escapeしていなかった。
+- $resource{anydbmfileerroranydbmfileerror}のtypo修正。
+
+*2002-07-12
+- YukiWiki 2.0.4公開。
+
+*2002-07-12
+- 2.0.3のXSS対策に不十分な点があったので&make_link修正(塚本牧生さんの指摘による)。
+- 配布物にデバッグ用のコードが残っていたのでコメントアウト。
+
+*2002-07-11
+- YukiWiki 2.0.3公開。
+
+*2002-07-11
+- officeさんから「クロスサイトスクリプティング脆弱性」の指摘を受ける。
+- ページ名にスクリプトが混入させられた場合に対処。
+- 生でページ名を見せず、必ず&escapeする修正を行う。
+
+*2002-06-30
+- do_indexでページ漏れが生じる問題はまだ未解決。
+- use AnyDBM_File;をevalでくるみ、エラーにならないように注意する。
+- エラーになったとき、$modifier_dbtypeがAnyDBM_Fileになっていたらエラーページを表示。
+- (自動的に$modifier_dbtypeを変更することはしない)
+
+*2002-06-06
+- YukiWiki 2.0.0公開。
+
+*2002-05-31
+- history1.txt, history2.txt作成。
+- wikiman_ja.pl作成。
+
+*2002-05-22
+- #で始まるページ名はnot is_editable.
+- 衝突が起きたときの画面を修正。
+
+*2002-05-21
+- RSSをXMLファイルではなくCGI経由で出すように修正。
+- &を正しくページ名として扱えるように修正。
+- wiki.cgiをreadme2.txtをreadme_en.txtとreadme_ja.txtに分離。
+- CGI中のPODは最小限にした。
+- データディレクトリを別ディレクトリにできるように$modifier_dir_dataを導入した。
+- alpha6
+
+*2002-05-19
+- footerの部分はaddress要素に変更。shinoさんの指摘による。
+- 目次リンクにバグあり。余計な#があり、うまく目次リンクからジャンプできなかった。
+
+*2002-05-18
+- WalWikiを参考にして、ページの * や ** は目次として収集するようにした。
+
+*2002-05-17
+- プレビュー画面(YukiWiki1から持ってきた)
+- YukiWiki1からYukiWiki2への移行ツール(WalWikiのconvert.cgiを改造。感謝)。
+- wiki.txt→frontpage.txtにリネーム。
+- YukiWikiDBを別ファイルにしてYuki::YukiWikiDBに移動。
+- AnyDBM_File, YukiWikiDB, dbmopenの3方式に対応（ふう…）。
+- alpha5のスクリプトを公開。
+- YukiWiki1のデータをごそっとYukiWiki2に移行してみる。大丈夫だろうか…。
+- とりあえず、YukiWiki1のほうは編集できなくしてみた。そのうち、自動的にYukiWiki2に転送するようにするつもり。
+
+*2002-05-16
+- existsがない場合にはdefinedで代用できるように$use_existsを導入。
+- RecentChangesの更新ミスを修正。
+
+*2002-05-14
+- RSS機能(Yuki::RSS)を追加した。
+- 差分用のコードがごちゃごちゃしていたので、Yuki::DiffTextを作った。
+- WalWiki(http://digit.que.ne.jp/work/index.cgi?WalWiki)からコードを借りてテーブルを実装。
+- alpha3のスクリプトを公開。
+
+*2002-05-13
+- 普通のページを凍結する手段はすでに作られている。
+- FrontPageに大きなロゴをつけた。
+- 差分をまずは組み込んだ。完全にはリソース化されていない。HTML::Templateが使いたくなる。
+
+*2002-05-09
+- 画像をimg化するようにした。
+- FormatRuleを編集画面の下のほうに出すようにした。
+
+*2002-05-08
+- TfWikiをYukiWiki2として、ディレクトリ移動。
+- 元のTfWikiのほうへのリンクはYukiWiki2へリダイレクト。
+
+*2002-04-14
+- [[YukiWiki2]]を次回のC MAGAZINEの連載題材にしようと考慮中。
+- [[YukiWiki2]]のロゴ作成依頼中。
+
+*2002-03-27
+- [[一言コメント機能]]で書き込んでも[[更新履歴]]が更新されない不具合の修正。
+- [[一言コメント逆順機能]]を試しに実装する。
+
+*2002-03-26
+- [[大阪弁:TfWiki作業記録]]というのはどうでしょうか。[[極悪]]さんのご紹介。
+- 画像のロゴは不要かもしれないが、リンク用バナーアイコン88x31はあってもいいかな。今度は割とシャープな感じにしたいな。
+- 編集のリンクに画像を使うことはやらない予定。ああいうアイコンって分かりにくいと思うから。
+- メニューバーは漢字表記になっているけれど、実はスクリプト中にはまったく日本語はないのだ。リソースファイルとして外部ファイル化している。だからやる気になれば、スクリプトはそのままで、(クッキーやCGIへ渡す引数などで)英語/日本語の全切り替えも可能なのだ。
+- 知らないうちに[[英語版:FrontPage]]もできそうな感じ。InterWikiNameに追加してくれた人、ありがとうございます。
+
+*2002-03-25
+- AdminEditでのエンコード忘れ修正。
+- タイトルを検索リンクにした。
+- TfWikiもいいけれど、YukiWikiをバージョンアップしたくなってきた。
+- 急に整形ルールを変更してみる。当然のごとくあちこちのレイアウトがおかしくなるのであった。ひえー。
+- だんだんTfWikiではなく、YukiWiki2.0を作っている気分になってきました。
+- [[一言コメント機能]]を実装しました。
+- RecentChangesや一言コメントの日付けはmonospaceになるようにスタイル指定。
+- 一言コメントをつけたときにもRecentChangesが更新されるように修正。
+- PlugIn機能を実装しているWikiがあるけれど、私はPlugInにはあまり興味なし。
+- できるだけシンプルに、でもあちこちのWikiClonesで実装されている便利な機能は取り込んでいくつもり。
+- で、適当なタイミングで現在のYukiWikiレポジトリをEUCに変換して、YukiWikiのバージョンアップへとつなげていこうと思っている。
+- [[YukiWiki2]]向けのロゴも作りたいな。
+- このページを観察しているページを発見(^_^) => http://www1.u-netsurf.ne.jp/~dune/wiki_2Epl.html?
+
+*2002-03-24
+- InterWikiを実験的に実装中。[[google:結城浩]]
+InterWikiはクリックされたときに展開したほうがよい、という指摘がありました。
+でも、それほど大きな負担ではないと思うので、まずはこのままにしておきます。
+- タイムスタンプの更新をやめることも可能にしました。
+- タッチファイルをいれて、更新情報でチェックしやすくしました。
+- 管理者という存在を入れました。外からは見えないけれど。
+- [[凍結ページ機能]]を実装しました。ちなみにこのページ自身も凍結。
+- 凍結ページの場合には右下にAdminEditのリンクを用意するようにした。
+
+*2002-03-23
+- 日本語のWikiNameは[[ ]]でくくることにしました。
+-- KbWikiのように「　　」にしようかな…。
+-- それ、Tikiでそうなっているけど、なにかと不便です‥‥‥。
+-- ふうん、やっぱり難しいものなのですね。
+-- 思い付きですが、"ほげほげ。。"というように、まるを２つ付ければWikinameになるというのどうでしょうか。いちいち、IMEを切替えなくて楽かも知れません。
+-- または、"＃ほげほげ"のように、全角の＃を付けたときとか。＃は滅多に使いませんし。
+-- アイディアどうもです。EUCにすると[[  ]]でくくってもあまりきにならなくなっちゃいました...
+
+- 衝突のチェック。
+-- ちなみに、衝突のチェックはYukiWikiのときと同じようにページのハッシュ値を使う。
+-- Last modifiedの情報を入れる
+-- これ、もう少し汎用にして、ページの「ヘッダ」を作る。Subjectもそこに入れる。
+-- 結局、衝突のチェックはLast-Modifedの情報を別データベースにいれた。
+-- ページのヘッダは煩雑すぎるのでやめ。
+
+*2002-03-22
+- 以降は、YukiWiki2の作業記録である。
+- IndexPage, SearchPage, HelpPageなどを作る
+-- これ、InterWikiの機能を使って実現できそうだな。自分自身をサーバとする。
+
+*2002-03-06
+- Version 1.6.8。
+- スタイルシートを別ファイルとした($stylesheet)。
+- Content-typeを出力する際にcharsetを明示的に出すようにした(print_header)。
+- プレビュー画面でも更新の衝突をチェックするように修正(check_conflict)。
+- 差分表示のとき、モノクロなブラウザでも分かるように表示(do_diff)。
+
+*2002-03-01
+- Version 1.6.7。
+- パッケージにDiff.pmを同梱。
+
+*2001-10-20
+- Version 1.6.6。
+- 更新の衝突対策。
+- 元ページの簡単なチェックサムを取っておき、更新前にチェックサムを比較する。
+修正個所はdigestという文字列を検索すれば分かる。
+本来はMD5などでちゃんとやった方がいいのだけれど。
+- 衝突時に表示されるメッセージなどは「極悪」さんのページを参考にした。
+
+*2001-10-17
+- Version 1.6.5。
+- プレビュー画面で、更新ボタンを押したときに送信される
+メッセージの内容をinput要素のtype="hidden"を使って埋め込むのをやめる。
+代わりに、textarea要素を使う。
+- 再プレビュー用にmyspecial_を導入。でもきれいな対策ではない。
+
+*2001-08-30
+- Version 1.6.4。
+- URLでダイレクトにページ名を指定しても、
+$WikiNameと$BracketName以外のページを作れないようにした。
+(is_valid_nameとis_editable参照)。
+
+*2001-08-30
+- Version 1.6.3。
+- RecentChangesを編集・再編集不可とした。
+- 編集不可ページは@uneditableにページ名を入れる。
+
+*2001-02-25
+- Version 1.6.1, 1.6.2。
+- 差分機能のバグ修正。
+- do_previewで'>'が扱えないバグを修正（ユーザからの指摘）。
+
+*2001-02-22
+- Version 1.6.0。
+- 差分機能を実装した。
+
+*2001-02-19
+- Version 1.5.4。
+- 画像ファイルへのリンクは画像にしてみた。
+
+*2001-02-19
+- Version 1.5.3。
+- RecentChangesの中に削除したページがあるのをやめた。
+- use strict;で引っかかる部分を少し整理(完全ではない)。
+
+*2001-02-16
+- Version 1.5.2。
+- textareaに表示およびプレビューする前に < や > を &lt; や &gt; に変換した
+(do_preview, editpage, print_preview_buttons)。
+
+*2000-12-27
+- Version 1.5.1。
+- プレビュー画面を整理した。
+
+*2000-12-22
+- Version 1.5.0。
+- 全体的にずいぶん書き直した。
+- 一覧を別途作成するようにした(do_list)。
+- 書き込む前に確認画面を出すようにした(do_preview)。
+- テキストの書き方を編集画面に入れた(do_edit, do_reedit)。
+- WhatsNew→RecentChanges、TopPage→FrontPageに変更した。
+
+*2000-12-20
+- Version 1.1.0。
+- tieを利用して、dbmopenが使えない場合でも動作するように修正。
+- 利用者の1人である「極悪」さんから送っていただいたコードを元にしています。
+
+*2000-09-05
+- Version 1.0.2。
+-  <body color=...> → <body bgcolor=...>
+- 利用者からの指摘による。感謝。
+
+*2000-08-06
+- Version 1.0.1を公開。
+- C MAGAZINE（ソフトバンクパブリッシング）2000年10月号連載記事向け公開版。
+- [[ ]] の最後が「望」のようにシフトJISで
+- 0x5Dになる場合の回避を行なった。
+
+*2000-08-05
+- Version 1.0.0を公開。
+
+*2000-07-23
+- Version 0.82を公開。
+- 編集時のリンクミス。
+- <textarea>の属性変更。
+
+*2000-07-22
+- Version 0.81を公開。
+- ロゴを組み込む。
+
+*2000-07-21
+- Version 0.80を公開。
+- PODをCGI中に書き込む。
+
+*2000-07-19
+- Version 0.70を公開。
+- '''イタリック'''や、--、---、>>、>>>などを実装。
+
+*2000-07-18
+- Version 0.60を公開。
+- *太字*を''太字''に変更
+
+*2000-07-17
+- Version 0.50を公開。
+
+*2000-07-17
+- さらにいろいろ追加する。
+
+*2000-07-16
+- いろいろ追加。
+
+*2000-07-15
+- 公開。

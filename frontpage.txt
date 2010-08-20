@@ -1,0 +1,13 @@
+このページはYukiWikiのFrontPageです。
+
+もしあなたが管理者なら、このYukiWikiを公開する前に、
+AdminChangePasswordのリンク経由で管理者のパスワードを設定してください。
+
+管理者のパスワードが設定できたなら、
+frontpage.txtを編集して、
+あなた独自のFrontPageを作ってください。
+
+- YukiWikiの最新情報は http://www.hyuki.com/yukiwiki/ にあります。
+- RecentChangesが最近更新されたページの一覧になります。
+- IndexPageは全ページの一覧です。
+- 練習にはSandBoxがお勧めです。
